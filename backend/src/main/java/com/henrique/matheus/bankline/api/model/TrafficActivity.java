@@ -3,11 +3,26 @@ package com.henrique.matheus.bankline.api.model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_traffic_activity")
 public class TrafficActivity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private LocalDateTime dateTime;
 	private String description;
 	private BigDecimal value;
+	
+	@Enumerated(EnumType.STRING)
 	private TypeTrafficActivity type;
 	
 	
