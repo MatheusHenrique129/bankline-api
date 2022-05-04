@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class BankAccount {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	
 	@Column(length = 20)
 	private String cpf;
@@ -34,10 +34,10 @@ public class BankAccount {
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getCpf() {
