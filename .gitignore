@@ -1,5 +1,5 @@
 .DS_Store
-backend/target/
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
