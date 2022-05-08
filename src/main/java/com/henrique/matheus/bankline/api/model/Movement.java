@@ -12,21 +12,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
-@Table(name = "tbl_traffic_activity")
-public class TrafficActivity {
+@Table(name = "tbl_movement")
+public class Movement {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime dateTime;
+	
 	private String description;
+	
 	private BigDecimal value;
 	
 	@Enumerated(EnumType.STRING)
-	private TypeTrafficActivity type;
+	private TypeMovement type;
 	
-	@Column(name = "id_account")
-	private Long idAccount;
+	@Column(name = "account_id")
+	private Long accountId;
 	
 	
 	public Long getId() {
@@ -53,17 +59,17 @@ public class TrafficActivity {
 	public void setValue(BigDecimal value) {
 		this.value = value;
 	}
-	public TypeTrafficActivity getType() {
+	public TypeMovement getType() {
 		return type;
 	}
-	public void setType(TypeTrafficActivity type) {
+	public void setType(TypeMovement type) {
 		this.type = type;
 	}
-	public Long getIdAccount() {
-		return idAccount;
+	public Long getAccountId() {
+		return accountId;
 	}
-	public void setIdAccount(Long idAccount) {
-		this.idAccount = idAccount;
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
 	}
 	
 }

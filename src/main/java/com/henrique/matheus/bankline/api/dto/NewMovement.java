@@ -6,13 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.henrique.matheus.bankline.api.model.TypeTrafficActivity;
+import com.henrique.matheus.bankline.api.model.TypeMovement;
 
-public class NewTrafficActivity {
+public class NewMovement {
 	private String description;
 	private BigDecimal value;
-	private TypeTrafficActivity type;
-	private Long idAccount;
+	private TypeMovement type;
+	private Long accountId;
 	
 	public String getDescription() {
 		return description;
@@ -26,16 +26,16 @@ public class NewTrafficActivity {
 	public void setValue(BigDecimal value) {
 		this.value = value;
 	}
-	public TypeTrafficActivity getType() {
+	public TypeMovement getType() {
 		return type;
 	}
-	public void setType(TypeTrafficActivity type) {
+	public void setType(TypeMovement type) {
 		this.type = type;
 	}
 	public Long getIdAccount() {
-		return idAccount;
+		return accountId;
 	}
-	public void setIdAccount(Long idAccount) {
-		this.idAccount = idAccount;
+	public void setIdAccount(Long accountId) {
+		this.accountId = accountId;
 	}
 }

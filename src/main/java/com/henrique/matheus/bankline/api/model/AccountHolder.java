@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tbl_banck_account")
-public class BankAccount {
+@Table(name = "tbl_account_holder")
+public class AccountHolder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,10 +23,6 @@ public class BankAccount {
 	
 	@Embedded
 	private Account account;
-	
-	
-	
-
 	
 	public Account getAccount() {
 		return account;
@@ -51,6 +47,5 @@ public class BankAccount {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}	
-	
+	}		
 }

@@ -1,6 +1,6 @@
 package com.henrique.matheus.bankline.api.dto;
 
-public class NewBankAccount {
+public class NewAccountHolder {
 	private String name;
 	private String cpf;
 	
